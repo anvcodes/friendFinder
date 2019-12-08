@@ -1,22 +1,38 @@
-var path = require("path");
-var express= require("express");
+var express = require('express');
+var path = require ('path');
+var routes = require('./routing/api');
+var htmlRoutes = require('./routing/html')
+var Router= express.Router();
+
+const app = express();
 
 var PORT = process.env.PORT || 3000;
 
-var app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
-require("./routing/apiRoutes");
 
-require("./routing/htmlRoutes");
+app.use("/api", Router);
 
-//api routes
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "/public/home.html"));
+});
+
+app.use("/", htmlRoutes);
+
+
+
+ 
+  // This is the default setting for the web page.
+  app.get('/:id', function(req, res){
+    res.sendFile(path.join(__dirname, "/public/home.html"));
+
+  });
+  
+
+
+
 
 app.listen(PORT, function(){
     console.log('Listening on PORT: ' + PORT);
 });
 
-
-
-module.exports= app;

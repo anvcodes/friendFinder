@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="html" href="survey.html" type="text/html">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
 </head>
 <header>
@@ -16,14 +22,29 @@
         <hr class="my-4">
         <p style="font-size: 50px;">Answer A Few Questions</p>
         <p style="font-size: 50px;">Then find the friend with the greatest compatibility</p>
-        <button class="btn btn-success btn-lg">
-            <i class="large material-icons" style="font-size: 20px;">assignment</i> <a href="#" role="button" style="color: white;">Survey</a>
+        <button class="btn btn-success btn-lg" id="subButtn">
+          <i class="large material-icons" style="font-size: 20px;">assignment</i> Survey
         </button>
         
       </div>
 </header>
 <body>
-    <a href="#" class="badge badge-info">Api Friends List</a>
 
+  
+
+    <script type="text/javascript"> 
+    
+    $("#subButtn").on('click', function(){
+      document.write('<body><h1>Survey Questions</h1><hr class="my-4"><div class="wrapper" style="margin-left: 2%; margin-right: 2%;"><h2><b>About You</b></h2><form><label>Name(required)</label><input class="form-control form-control-lg" type="text" placeholder="Name"><label>URL to Image</label>                                      <input class="form-control form-control-lg" type="url" placeholder="URL to Image"> </form> <hr class="my-4"><h3>Questions</h3><hr class="my-4"><div class="dropdown"</div><hr class="my-4"></div></body>')
+  
+ 
+});
+
+
+  
+ 
+
+ 
+    </script>
 </body>
 </html>
